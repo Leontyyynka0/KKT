@@ -1,0 +1,17 @@
+﻿<Window x:Class="PACMAN_ZP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PACMAN_ZP"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Canvas Name ="Menu" KeyDown="CanvasKeyDown" Focusable="True" Background="Black" RenderTransformOrigin="0.498,0.503">
+        <Frame Name="MainFrame" Height="600" Width="800" NavigationUIVisibility="Hidden"></Frame>
+
+        <Label x:Name="Pacman" Content="PAC-MAN" Canvas.Left="19" Height="198" Width="762" AutomationProperties.IsRequiredForForm="True" Foreground="Yellow" FontSize="150" FontWeight="Black" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+        <Button Name="Button1" Click="page1_button_Click" Content="Map 1" Canvas.Left="231" Canvas.Top="273" Height="87" Width="338" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="55" Foreground="Black" Background="Yellow"/>
+        <Button Name="Button2" Click="page2_button_Click" Content="Map 2" Canvas.Left="231" Canvas.Top="393" Height="87" Width="338" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="55" Foreground="Black" Background="Yellow"/>
+    </Canvas>
+</Window>
