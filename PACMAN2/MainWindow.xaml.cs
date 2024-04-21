@@ -48,7 +48,7 @@ namespace PACMAN2
             if (e.Key == Key.Left && noLeft == false)
             {
                 goRight = goUp = goDown = false;
-                noRight = noUp = noDown = false;
+                noRight = noUp = noDown = true;
 
                 goLeft = true;
 
