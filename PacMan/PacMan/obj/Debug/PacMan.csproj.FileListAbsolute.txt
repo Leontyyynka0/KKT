@@ -1,0 +1,40 @@
+C:\Users\LEA\Desktop\SSPŠ\PVA 2\PacMan\PacMan\obj\Debug\PacMan.csproj.AssemblyReference.cache
+C:\Users\LEA\Desktop\SSPŠ\PVA 2\PacMan\PacMan\obj\Debug\PacMan.csproj.SuggestedBindingRedirects.cache
+C:\Users\LEA\Desktop\SSPŠ\PVA 2\PacMan\PacMan\obj\Debug\MainWindow.g.cs
+C:\Users\LEA\Desktop\SSPŠ\PVA 2\PacMan\PacMan\obj\Debug\App.g.cs
+C:\Users\LEA\Desktop\SSPŠ\PVA 2\PacMan\PacMan\obj\Debug\PacMan_MarkupCompile.cache
+C:\Users\LEA\Desktop\SSPŠ\PVA 2\PacMan\PacMan\obj\Debug\PacMan_MarkupCompile.lref
+C:\Users\LEA\Desktop\SSPŠ\PVA 2\PacMan\PacMan\bin\Debug\PacMan.exe.config
+C:\Users\LEA\Desktop\SSPŠ\PVA 2\PacMan\PacMan\bin\Debug\PacMan.exe
+C:\Users\LEA\Desktop\SSPŠ\PVA 2\PacMan\PacMan\bin\Debug\PacMan.pdb
+C:\Users\LEA\Desktop\SSPŠ\PVA 2\PacMan\PacMan\obj\Debug\Window1.g.cs
+C:\Users\LEA\Desktop\SSPŠ\PVA 2\PacMan\PacMan\obj\Debug\Window2.g.cs
+C:\Users\LEA\Desktop\SSPŠ\PVA 2\PacMan\PacMan\obj\Debug\MainWindow.baml
+C:\Users\LEA\Desktop\SSPŠ\PVA 2\PacMan\PacMan\obj\Debug\Window1.baml
+C:\Users\LEA\Desktop\SSPŠ\PVA 2\PacMan\PacMan\obj\Debug\Window2.baml
+C:\Users\LEA\Desktop\SSPŠ\PVA 2\PacMan\PacMan\obj\Debug\PacMan.g.resources
+C:\Users\LEA\Desktop\SSPŠ\PVA 2\PacMan\PacMan\obj\Debug\PacMan.Properties.Resources.resources
+C:\Users\LEA\Desktop\SSPŠ\PVA 2\PacMan\PacMan\obj\Debug\PacMan.csproj.GenerateResource.cache
+C:\Users\LEA\Desktop\SSPŠ\PVA 2\PacMan\PacMan\obj\Debug\PacMan.csproj.CoreCompileInputs.cache
+C:\Users\LEA\Desktop\SSPŠ\PVA 2\PacMan\PacMan\obj\Debug\PacMan.exe
+C:\Users\LEA\Desktop\SSPŠ\PVA 2\PacMan\PacMan\obj\Debug\PacMan.pdb
+C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\bin\Debug\PacMan.exe.config
+C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\bin\Debug\PacMan.exe
+C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\bin\Debug\PacMan.pdb
+C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\PacMan.csproj.AssemblyReference.cache
+C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\PacMan.csproj.SuggestedBindingRedirects.cache
+C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\MainWindow.g.cs
+C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\Window1.g.cs
+C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\Window2.g.cs
+C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\App.g.cs
+C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\PacMan_MarkupCompile.cache
+C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\PacMan_MarkupCompile.lref
+C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\MainWindow.baml
+C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\Window1.baml
+C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\Window2.baml
+C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\PacMan.g.resources
+C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\PacMan.Properties.Resources.resources
+C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\PacMan.csproj.GenerateResource.cache
+C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\PacMan.csproj.CoreCompileInputs.cache
+C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\PacMan.exe
+C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\PacMan.pdb

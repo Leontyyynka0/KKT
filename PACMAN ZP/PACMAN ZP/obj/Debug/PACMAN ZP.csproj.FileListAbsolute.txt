@@ -18,3 +18,21 @@ C:\Users\LEA\Desktop\SSPŠ\PVA 2\PACMAN ZP\PACMAN ZP\obj\Debug\PACMAN ZP.csproj.
 C:\Users\LEA\Desktop\SSPŠ\PVA 2\PACMAN ZP\PACMAN ZP\obj\Debug\PACMAN ZP.csproj.CoreCompileInputs.cache
 C:\Users\LEA\Desktop\SSPŠ\PVA 2\PACMAN ZP\PACMAN ZP\obj\Debug\PACMAN ZP.exe
 C:\Users\LEA\Desktop\SSPŠ\PVA 2\PACMAN ZP\PACMAN ZP\obj\Debug\PACMAN ZP.pdb
+C:\Users\LEA\Documents\GitHub\KKT\PACMAN ZP\PACMAN ZP\obj\Debug\PACMAN ZP.csproj.AssemblyReference.cache
+C:\Users\LEA\Documents\GitHub\KKT\PACMAN ZP\PACMAN ZP\obj\Debug\PACMAN ZP.csproj.SuggestedBindingRedirects.cache
+C:\Users\LEA\Documents\GitHub\KKT\PACMAN ZP\PACMAN ZP\obj\Debug\MainWindow.g.cs
+C:\Users\LEA\Documents\GitHub\KKT\PACMAN ZP\PACMAN ZP\obj\Debug\Page1.g.cs
+C:\Users\LEA\Documents\GitHub\KKT\PACMAN ZP\PACMAN ZP\obj\Debug\App.g.cs
+C:\Users\LEA\Documents\GitHub\KKT\PACMAN ZP\PACMAN ZP\obj\Debug\PACMAN ZP_MarkupCompile.cache
+C:\Users\LEA\Documents\GitHub\KKT\PACMAN ZP\PACMAN ZP\obj\Debug\PACMAN ZP_MarkupCompile.lref
+C:\Users\LEA\Documents\GitHub\KKT\PACMAN ZP\PACMAN ZP\obj\Debug\PACMAN ZP.exe
+C:\Users\LEA\Documents\GitHub\KKT\PACMAN ZP\PACMAN ZP\obj\Debug\PACMAN ZP.pdb
+C:\Users\LEA\Documents\GitHub\KKT\PACMAN ZP\PACMAN ZP\bin\Debug\PACMAN ZP.exe.config
+C:\Users\LEA\Documents\GitHub\KKT\PACMAN ZP\PACMAN ZP\bin\Debug\PACMAN ZP.exe
+C:\Users\LEA\Documents\GitHub\KKT\PACMAN ZP\PACMAN ZP\bin\Debug\PACMAN ZP.pdb
+C:\Users\LEA\Documents\GitHub\KKT\PACMAN ZP\PACMAN ZP\obj\Debug\MainWindow.baml
+C:\Users\LEA\Documents\GitHub\KKT\PACMAN ZP\PACMAN ZP\obj\Debug\Page1.baml
+C:\Users\LEA\Documents\GitHub\KKT\PACMAN ZP\PACMAN ZP\obj\Debug\PACMAN ZP.g.resources
+C:\Users\LEA\Documents\GitHub\KKT\PACMAN ZP\PACMAN ZP\obj\Debug\PACMAN_ZP.Properties.Resources.resources
+C:\Users\LEA\Documents\GitHub\KKT\PACMAN ZP\PACMAN ZP\obj\Debug\PACMAN ZP.csproj.GenerateResource.cache
+C:\Users\LEA\Documents\GitHub\KKT\PACMAN ZP\PACMAN ZP\obj\Debug\PACMAN ZP.csproj.CoreCompileInputs.cache

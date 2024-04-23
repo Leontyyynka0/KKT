@@ -26,7 +26,7 @@ namespace PACMAN_ZP
 
         }
         Page1 page1 = new Page1();
-        Page2 page2 = new Page2();
+        //Page2 page2 = new Page2();
   
         public MainWindow()
         {
@@ -38,16 +38,16 @@ namespace PACMAN_ZP
             {
                 MainFrame.Content = page1;
                 Button1.Visibility = Visibility.Collapsed;
-                Button2.Visibility = Visibility.Collapsed;
+                //Button2.Visibility = Visibility.Collapsed;
                 Pacman.Visibility = Visibility.Collapsed;
         }
-        private void page2_button_Click(object sender, RoutedEventArgs e)
+        /*private void page2_button_Click(object sender, RoutedEventArgs e)
             {
                 MainFrame.Content = page2;
                 Button1.Visibility = Visibility.Collapsed;
                 Button2.Visibility = Visibility.Collapsed;
                 Pacman.Visibility = Visibility.Collapsed;
-        }
+        }*/
 
 
 

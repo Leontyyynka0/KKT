@@ -12,6 +12,5 @@
         <Label x:Name="Pacman" Content="PAC-MAN" Canvas.Left="19" Height="198" Width="762" AutomationProperties.IsRequiredForForm="True" Foreground="Yellow" FontSize="150" FontWeight="Black" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
         <Button Name="Button1" Click="page1_button_Click" Content="Map 1" Canvas.Left="231" Canvas.Top="273" Height="87" Width="338" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="55" Foreground="Black" Background="Yellow"/>
-        <Button Name="Button2" Click="page2_button_Click" Content="Map 2" Canvas.Left="231" Canvas.Top="393" Height="87" Width="338" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="55" Foreground="Black" Background="Yellow"/>
     </Canvas>
 </Window>

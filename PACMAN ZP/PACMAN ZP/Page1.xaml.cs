@@ -207,7 +207,7 @@ namespace PACMAN_ZP
             txtScore.Content = "Score: " + Score;
 
             //pohyb pacmana
-            if (goRight)
+            /*if (goRight)
             {
                 Canvas.SetLeft(pacman, Canvas.GetLeft(pacman) + speed);
             }
@@ -223,7 +223,7 @@ namespace PACMAN_ZP
             {
                 Canvas.SetTop(pacman, Canvas.GetTop(pacman) + speed);
             }
-
+            */
             //nastavení hranice mapy
             if (goDown && Canvas.GetTop(pacman) + 80 > Application.Current.MainWindow.Height)
             {
