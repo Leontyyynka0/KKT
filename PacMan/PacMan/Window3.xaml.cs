@@ -17,7 +17,10 @@ using System.Windows.Threading;
 
 namespace PacMan
 {
-    public partial class Window1 : Window
+    /// <summary>
+    /// Interakční logika pro Window3.xaml
+    /// </summary>
+    public partial class Window3 : Window
     {
         DispatcherTimer gameTimer = new DispatcherTimer();
 
@@ -30,13 +33,13 @@ namespace PacMan
 
         Rect pacmanHitbox;
 
-        int ghostSpeed = 7;
+        int ghostSpeed = 10;
         int ghostMoveStep = 100;
-        int currentGhostStep = 7;
+        int currentGhostStep;
         int Score;
 
 
-        public Window1()
+        public Window3()
         {
             InitializeComponent();
 
@@ -171,9 +174,27 @@ namespace PacMan
             {
                 if ((string)x.Tag == "ghost" && x.Visibility == Visibility.Visible)
                 {
+
                     if (pacmanHitbox.IntersectsWith(new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height)))
                     {
                         GameOver("ghost killed you");
+                    }
+
+                    if (x.Name == "red")
+                    {
+                        Canvas.SetLeft(x, Canvas.GetLeft(x) - ghostSpeed);
+                    }
+                    else
+                    {
+                        Canvas.SetLeft(x, Canvas.GetLeft(x) + ghostSpeed);
+                    }
+
+                    currentGhostStep--;
+
+                    if (currentGhostStep < 1)
+                    {
+                        currentGhostStep = ghostMoveStep;
+                        ghostSpeed = -ghostSpeed;
                     }
                 }
             }
@@ -247,3 +268,4 @@ namespace PacMan
         }
     }
 }
+

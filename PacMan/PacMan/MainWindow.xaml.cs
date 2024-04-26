@@ -14,6 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+//TODO: :(((  VYPNUTÍ OSTATNÍCH OKEN (seká se mi aplikace), KOLIZE, POWERUPY, nejlepší čas ukládat do souboru
+
 namespace PacMan
 {
     /// <summary>

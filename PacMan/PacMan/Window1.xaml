@@ -11,9 +11,9 @@
         <Label FontSize="20" Name="txtScore" Foreground="White" Content="Score 0"/>
 
         <Rectangle Name="pacman" Width="30" Height="30" Fill="Yellow" Canvas.Left="35" Canvas.Top="128"/>
-        <Rectangle Name="red" Width="30" Height="30" Fill="Red" Canvas.Left="613" Canvas.Top="422" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Rectangle Name="blue" Width="30" Height="30" Fill="Blue" Canvas.Left="139" Canvas.Top="328" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Rectangle Name="pink" Width="30" Height="26" Fill="LightPink" Canvas.Left="351" Canvas.Top="132" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Rectangle Tag="ghost" Name="red" Width="30" Height="30" Fill="Red" Canvas.Left="630" Canvas.Top="422" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Rectangle Tag="ghost" Name="blue" Width="30" Height="30" Fill="Blue" Canvas.Left="139" Canvas.Top="328" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Tag="ghost" Name="pink" Width="30" Height="26" Fill="LightPink" Canvas.Left="351" Canvas.Top="132" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
         <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="3" Height="23" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="90" Width="107"/>
         <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="3" Height="38" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="77" Canvas.Top="468" Width="646"/>
