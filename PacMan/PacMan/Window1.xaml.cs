@@ -122,7 +122,7 @@ namespace PacMan
         {
 
 
-            /*foreach (var x in MyCanvas.Children.OfType<Rectangle>())
+            foreach (var x in MyCanvas.Children.OfType<Rectangle>())
             {
                 // Detekce kolize s bariérama ("wall")
                 if ((string)x.Tag == "wall")
@@ -151,7 +151,7 @@ namespace PacMan
 
                     }
                 }
-            }*/
+            }
 
             // Detekce kolize s mincemi ("coin") a zvýšení skóre
             foreach (var x in MyCanvas.Children.OfType<Rectangle>())
