@@ -35,11 +35,13 @@ namespace PacMan
         }
         private void window1_button_Click(object sender, RoutedEventArgs e)
         {
+            Lazy<Window1> lazyWindow1 = new Lazy<Window1>(() => new Window1());
             Window1 popup = new Window1();
             popup.ShowDialog();
         }
         private void window2_button_Click(object sender, RoutedEventArgs e)
         {
+            Lazy<Window2> lazyWindow2 = new Lazy<Window2>(() => new Window2());
             Window2 popup = new Window2();
             popup.ShowDialog();
         }
