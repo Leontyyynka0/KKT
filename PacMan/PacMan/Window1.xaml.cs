@@ -141,6 +141,7 @@ namespace PacMan
                         // Pokud změní směr, ponecháme Pacmana pohybovat se v novém směru
                     }
                 }
+                speed = 8;
             }
 
             // Detekce kolize s mincemi ("coin") a zvýšení skóre

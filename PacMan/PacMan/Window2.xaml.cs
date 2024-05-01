@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.IO;
 
 namespace PacMan
 {
@@ -30,9 +31,9 @@ namespace PacMan
 
         Rect pacmanHitbox;
 
-        int ghostSpeed = 10;
-        int ghostMoveStep = 130;
-        int currentGhostStep;
+        int ghostSpeed = 7;
+        int ghostMoveStep = 100;
+        int currentGhostStep = 7;
         int Score;
 
 
@@ -120,43 +121,32 @@ namespace PacMan
         }
         void Collide(string Dir)
         {
-
-
             foreach (var x in MyCanvas2.Children.OfType<Rectangle>())
             {
-                // Detekce kolize s bariérama ("wall")
-                if ((string)x.Tag == "wall")
+                if ((string)x.Tag == "wall2")
                 {
                     Rect pacmanHitbox = new Rect(Canvas.GetLeft(pacman2), Canvas.GetTop(pacman2), pacman2.Width, pacman2.Height);
                     Rect wallHitbox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
 
                     if (pacmanHitbox.IntersectsWith(wallHitbox))
                     {
-                        if (goRight && speedX > 0)
+                        // Pokud Pacman pokračuje ve stejném směru jako kolize se zdí,
+                        // pak zastavíme pohyb Pacmana
+                        if ((goRight && speed > 0) || (goLeft && speed < 0) || (goUp && speed < 0) || (goDown && speed > 0))
                         {
-                            Canvas.SetLeft(pacman2, Canvas.GetLeft(pacman2) - speedX);
+                            speed = 0;
+                            break; // Ukončíme smyčku po detekci první kolize
                         }
-                        else if (goLeft && speedX < 0)
-                        {
-                            Canvas.SetLeft(pacman2, Canvas.GetLeft(pacman2) - speedX);
-                        }
-                        else if (goUp && speedY < 0)
-                        {
-                            Canvas.SetTop(pacman2, Canvas.GetTop(pacman2) - speedY);
-                        }
-                        else if (goDown && speedY > 0)
-                        {
-                            Canvas.SetTop(pacman2, Canvas.GetTop(pacman2) - speedY);
-                        }
-
+                        // Pokud změní směr, ponecháme Pacmana pohybovat se v novém směru
                     }
                 }
+                speed = 8;
             }
 
             // Detekce kolize s mincemi ("coin") a zvýšení skóre
             foreach (var x in MyCanvas2.Children.OfType<Rectangle>())
             {
-                if ((string)x.Tag == "coin" && x.Visibility == Visibility.Visible)
+                if ((string)x.Tag == "coin2" && x.Visibility == Visibility.Visible)
                 {
                     if (pacmanHitbox.IntersectsWith(new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height)))
                     {
@@ -169,16 +159,14 @@ namespace PacMan
             // Detekce kolize s duchy ("ghost") a konec hry
             foreach (var x in MyCanvas2.Children.OfType<Rectangle>())
             {
-                if ((string)x.Tag == "ghost")
+                if ((string)x.Tag == "ghost" && x.Visibility == Visibility.Visible)
                 {
-                    Rect ghostHitbox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
-
-                    if (pacmanHitbox.IntersectsWith(ghostHitbox))
+                    if (pacmanHitbox.IntersectsWith(new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height)))
                     {
-                        GameOver("Ghost killed you, click to play again");
+                        GameOver("ghost killed you");
                     }
 
-                    if (x.Name == "red")
+                    if (x.Name == "red2")
                     {
                         Canvas.SetLeft(x, Canvas.GetLeft(x) - ghostSpeed);
                     }
@@ -186,7 +174,6 @@ namespace PacMan
                     {
                         Canvas.SetLeft(x, Canvas.GetLeft(x) + ghostSpeed);
                     }
-
                     currentGhostStep--;
 
                     if (currentGhostStep < 1)
@@ -206,6 +193,8 @@ namespace PacMan
         private void GameLoop(object sender, EventArgs e)
         {
             txtScore.Content = "Score: " + Score;
+
+            pacmanHitbox = new Rect(Canvas.GetLeft(pacman2), Canvas.GetTop(pacman2), pacman2.Width, pacman2.Height);
 
             //pohyb pacmana
             if (goRight)
