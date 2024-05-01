@@ -122,10 +122,8 @@ namespace PacMan
         void Collide(string Dir)
         {
 
-
             foreach (var x in MyCanvas.Children.OfType<Rectangle>())
             {
-                // Detekce kolize s bariérama ("wall")
                 if ((string)x.Tag == "wall")
                 {
                     Rect pacmanHitbox = new Rect(Canvas.GetLeft(pacman), Canvas.GetTop(pacman), pacman.Width, pacman.Height);
@@ -133,23 +131,14 @@ namespace PacMan
 
                     if (pacmanHitbox.IntersectsWith(wallHitbox))
                     {
-                        if (goRight && speedX > 0)
+                        // Pokud Pacman pokračuje ve stejném směru jako kolize se zdí,
+                        // pak zastavíme pohyb Pacmana
+                        if ((goRight && speed > 0) || (goLeft && speed < 0) || (goUp && speed < 0) || (goDown && speed > 0))
                         {
-                            Canvas.SetLeft(pacman, Canvas.GetLeft(pacman) - speedX);
+                            speed = 0;
+                            break; // Ukončíme smyčku po detekci první kolize
                         }
-                        else if (goLeft && speedX < 0)
-                        {
-                            Canvas.SetLeft(pacman, Canvas.GetLeft(pacman) - speedX);
-                        }
-                        else if (goUp && speedY < 0)
-                        {
-                            Canvas.SetTop(pacman, Canvas.GetTop(pacman) - speedY);
-                        }
-                        else if (goDown && speedY > 0)
-                        {
-                            Canvas.SetTop(pacman, Canvas.GetTop(pacman) - speedY);
-                        }
-
+                        // Pokud změní směr, ponecháme Pacmana pohybovat se v novém směru
                     }
                 }
             }
