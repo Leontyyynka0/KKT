@@ -9,6 +9,8 @@
     <Canvas Name ="MyCanvas" KeyDown="CanvasKeyDown" Focusable="True" Background="Black" RenderTransformOrigin="0.498,0.503">
 
         <Label FontSize="20" Name="txtScore" Foreground="White" Content="Score 0"/>
+        <TextBlock x:Name="txtTime" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" Canvas.Left="691" Width="109" Height="27"/>
+
 
         <Rectangle Name="pacman" Width="30" Height="30" Fill="Yellow" Canvas.Left="35" Canvas.Top="128"/>
         <Rectangle Tag="ghost" Name="red" Width="30" Height="30" Fill="Red" Canvas.Left="630" Canvas.Top="422" HorizontalAlignment="Left" VerticalAlignment="Center"/>

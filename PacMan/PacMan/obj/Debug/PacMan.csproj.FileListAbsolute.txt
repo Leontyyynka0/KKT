@@ -39,3 +39,4 @@ C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\PacMan.csproj.CoreComp
 C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\PacMan.exe
 C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\PacMan.pdb
 C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\Window3.g.cs
+C:\Users\LEA\Documents\GitHub\KKT\PacMan\PacMan\obj\Debug\Window3.baml
