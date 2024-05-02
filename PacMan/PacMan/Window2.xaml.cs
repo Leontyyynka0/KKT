@@ -125,28 +125,35 @@ namespace PacMan
             {
                 if ((string)x.Tag == "wall2")
                 {
-                    Rect pacmanHitbox = new Rect(Canvas.GetLeft(pacman2), Canvas.GetTop(pacman2), pacman2.Width, pacman2.Height);
-                    Rect wallHitbox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
 
-                    if (pacmanHitbox.IntersectsWith(wallHitbox))
+                    Rect pacmanHitBox = new Rect(Canvas.GetLeft(pacman2), Canvas.GetTop(pacman2), pacman2.Width, pacman2.Height);
+                    Rect hitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
+                    if (goLeft == true && pacmanHitBox.IntersectsWith(hitBox))
                     {
-                        // Pokud Pacman pokračuje ve stejném směru jako kolize se zdí,
-                        // pak zastavíme pohyb Pacmana
-                        if ((goRight && speed > 0) || (goLeft && speed > 0) || (goUp && speed > 0) || (goDown && speed > 0))
-                        {
-                            speed = 0;
-                            
-                            
-                            if (goLeft || goRight)
-                            {
-                                
-                                speed = 8;
-                            }
-
-
-                            
-                        }
-                        // Pokud změní směr, ponecháme Pacmana pohybovat se v novém směru
+                        Canvas.SetLeft(pacman2, Canvas.GetLeft(pacman2) + 10);
+                        noLeft = true;
+                        goLeft = false;
+                    }
+                    // check if we are colliding with the wall while moving right if true then stop the pac man movement
+                    if (goRight == true && pacmanHitBox.IntersectsWith(hitBox))
+                    {
+                        Canvas.SetLeft(pacman2, Canvas.GetLeft(pacman2) - 10);
+                        noRight = true;
+                        goRight = false;
+                    }
+                    // check if we are colliding with the wall while moving down if true then stop the pac man movement
+                    if (goDown == true && pacmanHitBox.IntersectsWith(hitBox))
+                    {
+                        Canvas.SetTop(pacman2, Canvas.GetTop(pacman2) - 10);
+                        noDown = true;
+                        goDown = false;
+                    }
+                    // check if we are colliding with the wall while moving up if true then stop the pac man movement
+                    if (goUp == true && pacmanHitBox.IntersectsWith(hitBox))
+                    {
+                        Canvas.SetTop(pacman2, Canvas.GetTop(pacman2) + 10);
+                        noUp = true;
+                        goUp = false;
                     }
                 }
             }

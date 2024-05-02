@@ -121,39 +121,42 @@ namespace PacMan
         }
         void Collide(string Dir)
         {
-
             foreach (var x in MyCanvas.Children.OfType<Rectangle>())
             {
-                // Detekce kolize s bariérama ("wall")
                 if ((string)x.Tag == "wall")
                 {
-                    Rect pacmanHitbox = new Rect(Canvas.GetLeft(pacman), Canvas.GetTop(pacman), pacman.Width, pacman.Height);
-                    Rect wallHitbox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
-
-                    if (pacmanHitbox.IntersectsWith(wallHitbox))
+                    
+                    Rect pacmanHitBox = new Rect(Canvas.GetLeft(pacman), Canvas.GetTop(pacman), pacman.Width, pacman.Height);
+                    Rect hitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
+                    if (goLeft == true && pacmanHitBox.IntersectsWith(hitBox))
                     {
-                        // Zastavení pohybu pacmana v daném směru
-                        if (goRight)
-                        {
-                            Canvas.SetLeft(pacman, Canvas.GetLeft(pacman) - speed);
-                        }
-                        else if (goLeft)
-                        {
-                            Canvas.SetLeft(pacman, Canvas.GetLeft(pacman) - speed);
-                        }
-                        else if (goUp)
-                        {
-                            Canvas.SetTop(pacman, Canvas.GetTop(pacman) - speed);
-                        }
-                        else if (goDown)
-                        {
-                            Canvas.SetTop(pacman, Canvas.GetTop(pacman) - speed);
-                        }
-                        break;
+                        Canvas.SetLeft(pacman, Canvas.GetLeft(pacman) + 10);
+                        noLeft = true;
+                        goLeft = false;
+                    }
+                    // check if we are colliding with the wall while moving right if true then stop the pac man movement
+                    if (goRight == true && pacmanHitBox.IntersectsWith(hitBox))
+                    {
+                        Canvas.SetLeft(pacman, Canvas.GetLeft(pacman) - 10);
+                        noRight = true;
+                        goRight = false;
+                    }
+                    // check if we are colliding with the wall while moving down if true then stop the pac man movement
+                    if (goDown == true && pacmanHitBox.IntersectsWith(hitBox))
+                    {
+                        Canvas.SetTop(pacman, Canvas.GetTop(pacman) - 10);
+                        noDown = true;
+                        goDown = false;
+                    }
+                    // check if we are colliding with the wall while moving up if true then stop the pac man movement
+                    if (goUp == true && pacmanHitBox.IntersectsWith(hitBox))
+                    {
+                        Canvas.SetTop(pacman, Canvas.GetTop(pacman) + 10);
+                        noUp = true;
+                        goUp = false;
                     }
                 }
             }
-
             // Detekce kolize s mincemi ("coin") a zvýšení skóre
             foreach (var x in MyCanvas.Children.OfType<Rectangle>())
             {
