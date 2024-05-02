@@ -21,6 +21,8 @@ namespace PacMan
     public partial class Window2 : Window
     {
         DispatcherTimer gameTimer = new DispatcherTimer();
+        DispatcherTimer scoreTimer = new DispatcherTimer();
+        private int seconds = 0;
 
         bool goLeft, goRight, goUp, goDown;
         bool noLeft, noRight, noUp, noDown;
@@ -31,9 +33,9 @@ namespace PacMan
 
         Rect pacmanHitbox;
 
-        int ghostSpeed = 7;
-        int ghostMoveStep = 100;
-        int currentGhostStep = 7;
+        int ghostSpeed = 3;
+        int ghostMoveStep = 300;
+        int currentGhostStep = 100;
         int Score;
 
 
@@ -42,6 +44,19 @@ namespace PacMan
             InitializeComponent();
 
             GameSetup();
+
+            StartScoreTimer();
+        }
+        private void StartScoreTimer()
+        {
+            scoreTimer.Tick += ScoreTimer_Tick;
+            scoreTimer.Interval = TimeSpan.FromSeconds(1);
+            scoreTimer.Start();
+        }
+        private void ScoreTimer_Tick(object sender, EventArgs e)
+        {
+            seconds++;
+            txtTime.Text = "Time: " + seconds;
         }
 
         private void CanvasKeyDown(object sender, KeyEventArgs e)
@@ -262,6 +277,9 @@ namespace PacMan
         {
             gameTimer.Stop();
             MessageBox.Show(message, "pac man wpf");
+
+            string result = $"Time: {seconds} s, Score: {Score}";
+            File.AppendAllText("game_result.txt", result + Environment.NewLine);
 
             System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
             Application.Current.Shutdown();
