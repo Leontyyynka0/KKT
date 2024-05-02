@@ -132,15 +132,23 @@ namespace PacMan
                     {
                         // Pokud Pacman pokračuje ve stejném směru jako kolize se zdí,
                         // pak zastavíme pohyb Pacmana
-                        if ((goRight && speed > 0) || (goLeft && speed < 0) || (goUp && speed < 0) || (goDown && speed > 0))
+                        if ((goRight && speed > 0) || (goLeft && speed > 0) || (goUp && speed > 0) || (goDown && speed > 0))
                         {
                             speed = 0;
-                            break; // Ukončíme smyčku po detekci první kolize
+                            
+                            
+                            if (goLeft || goRight)
+                            {
+                                
+                                speed = 8;
+                            }
+
+
+                            
                         }
                         // Pokud změní směr, ponecháme Pacmana pohybovat se v novém směru
                     }
                 }
-                speed = 8;
             }
 
             // Detekce kolize s mincemi ("coin") a zvýšení skóre
