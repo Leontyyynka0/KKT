@@ -20,3 +20,6 @@ Time: 4 s, Score: 12
 Time: 4 s, Score: 12
 Time: 5 s, Score: 11
 Time: 5 s, Score: 11
+Time: 18 s, Score: 40
+Time: 4 s, Score: 12
+Time: 4 s, Score: 12

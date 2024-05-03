@@ -29,9 +29,9 @@
         <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="3" Height="58" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="691" Canvas.Top="410" Width="32"/>
         <Rectangle Tag="wall" Stroke="Aqua" StrokeThickness="3" Height="24" Canvas.Top="85" Width="330" Canvas.Left="393" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
+        <Rectangle Tag="boost" Height="14" Width="14" Fill="BlueViolet" RenderTransformOrigin="-2.3,0.037" Canvas.Left="31" Canvas.Top="251" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
-
-        <Rectangle Tag="coin" Height="14" Width="14" Fill="Gold" RenderTransformOrigin="-2.3,0.037" Canvas.Left="130" Canvas.Top="136" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Tag="coin" Height="14" Width="14" Fill="Gold" RenderTransformOrigin="-2.3,0.037" Canvas.Left="131" Canvas.Top="136" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Rectangle Tag="coin" Height="14" Width="14" Fill="Gold" RenderTransformOrigin="-2.3,0.037" Canvas.Left="130" Canvas.Top="90" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <Rectangle Tag="coin" Height="14" Width="14" Fill="Gold" RenderTransformOrigin="-2.3,0.037" Canvas.Left="131" Canvas.Top="35" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Rectangle Tag="coin" Height="14" Width="14" Fill="Gold" RenderTransformOrigin="-2.3,0.037" Canvas.Left="176" Canvas.Top="35" HorizontalAlignment="Left" VerticalAlignment="Center"/>

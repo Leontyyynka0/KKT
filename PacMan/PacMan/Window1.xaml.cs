@@ -23,6 +23,8 @@ namespace PacMan
         DispatcherTimer gameTimer = new DispatcherTimer();
         DispatcherTimer scoreTimer = new DispatcherTimer();
         private int seconds = 0;
+        DispatcherTimer boostTimer = new DispatcherTimer();
+        private int boostDuration = 6;
 
         bool goLeft, goRight, goUp, goDown;
         bool noLeft, noRight, noUp, noDown;
@@ -46,6 +48,7 @@ namespace PacMan
             GameSetup();
 
             StartScoreTimer();
+
         }
         private void StartScoreTimer()
         {
@@ -57,6 +60,17 @@ namespace PacMan
         {
             seconds++;
             txtTime.Text = "Time: " + seconds;
+        }
+        private void StartBoostTimer()
+        {
+            boostTimer.Tick += BoostTimer_Tick;
+            boostTimer.Interval = TimeSpan.FromSeconds(boostDuration);
+        }
+        private void BoostTimer_Tick(object sender, EventArgs e)
+        {
+            // Po vypršení časového limitu obnovíme původní rychlost
+            speed = 2;
+            boostTimer.Stop();
         }
         private void CanvasKeyDown(object sender, KeyEventArgs e)
         {
@@ -180,6 +194,19 @@ namespace PacMan
                     {
                         x.Visibility = Visibility.Hidden;
                         Score++;
+                    }
+                }
+            }
+            foreach (var x in MyCanvas.Children.OfType<Rectangle>())
+            {
+                if ((string)x.Tag == "boost" && x.Visibility == Visibility.Visible)
+                {
+                    if (pacmanHitbox.IntersectsWith(new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height)))
+                    {
+                        x.Visibility = Visibility.Hidden;
+                        speed = 2;
+                        boostTimer.Start(); // Spuštění časovače pro časové omezení boostu
+                        break;
                     }
                 }
             }
